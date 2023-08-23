@@ -1,0 +1,18 @@
+{
+  "name": "structy-algos",
+  "version": "1.0.0",
+  "description": "The data structures and algorithms reviewed in Structy course by Alvin Zablan",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toriekim/structy-ds-and-algos.git"
+  },
+  "homepage": "https://github.com/toriekim/structy-ds-and-algos#readme"
+}
