@@ -16,6 +16,4 @@ const maxValue = (nums) => {
   return max;
 };
 
-module.exports = {
-  maxValue,
-};
+export default maxValue;

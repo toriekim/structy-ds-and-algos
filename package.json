@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "The data structures and algorithms reviewed in Structy course by Alvin Zablan",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --timeout 5000 ./*/*-test.js"
   },
   "devDependencies": {
     "chai": "^4.3.7",

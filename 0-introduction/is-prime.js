@@ -27,6 +27,4 @@ const isPrime = (n) => {
   return true;
 };
 
-module.exports = {
-  isPrime,
-};
+export default isPrime;
