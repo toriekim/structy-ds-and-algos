@@ -37,6 +37,4 @@ const uncompress = (s) => {
   return result.join('');
 };
 
-module.exports = {
-  uncompress,
-};
+export default uncompress;
