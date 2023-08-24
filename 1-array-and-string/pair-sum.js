@@ -20,13 +20,25 @@
  *
  * Guaranteed to be one pair that sums to the target
  *
+ * Considerations:
+ * Can't and shouldn't sort array b/c need to return indices
+ *
  * Approach:
- * sort the numbers array ascending value
- * initalize 2 pointers at start and end of numbers array
- * while loop i < j
- * if sum > target, j--
- * if sum < target, i++
- * if sum = target, return i, j
+ * Initialize map to keep track of indices & pair values
+ * Loop through array
+ *  Calculate the other pair = targetSum - numbers[i]
+ *  Check if pair in map -> return [map[pair], i]
+ *  Else add to map -> [key: numbers[i]]: [value: i]
  */
 
-const pairSum = (numbers, targetSum) => {};
+const pairSum = (numbers, targetSum) => {
+  const map = {};
+
+  for (let i = 0; i < numbers.length; i++) {
+    const num = numbers[i];
+    const pair = targetSum - num;
+    if (pair in map) return [map[pair], i];
+
+    map[num] = i;
+  }
+};
