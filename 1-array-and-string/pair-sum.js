@@ -42,3 +42,5 @@ const pairSum = (numbers, targetSum) => {
     map[num] = i;
   }
 };
+
+export default pairSum;
