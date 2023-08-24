@@ -30,6 +30,16 @@
  * Else add numbers[i], i to map
  */
 
-const pairProduct = (numbers, targetProduct) => {};
+const pairProduct = (numbers, targetProduct) => {
+  const map = {};
+
+  for (let i = 0; i < numbers.length; i++) {
+    const num = numbers[i];
+    const pair = targetProduct / num;
+    if (pair in map) return [map[pair], i];
+
+    map[num] = i;
+  }
+};
 
 export default pairProduct;
