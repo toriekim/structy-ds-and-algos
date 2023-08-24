@@ -1,12 +1,12 @@
 /**
- * Write a function, mostFrequentChar, that takes in a string
+ * Write a function, mostuentChar, that takes in a string
  * as an argument. The function should return the most frequent
  * character of the string. If there are ties, return the
  * character that appears earlier in the string.
  *
  * You can assume that the input string is non-empty.
  *
- * EX) mostFrequentChar('bookeeper'); // -> 'e'
+ * EX) mostuentChar('bookeeper'); // -> 'e'
  *
  * Assumptions:
  * IN: string -> word
@@ -24,6 +24,22 @@
  * loop through frequency map to compare
  */
 
-const mostFrequentChar = (s) => {};
+const mostFrequentChar = (s) => {
+  const count = {};
+
+  for (let letter of s) {
+    if (!(letter in count)) count[letter] = 0;
+    count[letter]++;
+  }
+
+  let most = null;
+  for (let letter in count) {
+    if (most === null || count[letter] > count[most]) {
+      most = letter;
+    }
+  }
+
+  return most;
+};
 
 export default mostFrequentChar;
