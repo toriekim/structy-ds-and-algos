@@ -33,6 +33,4 @@ const compress = (s) => {
   return result.join('');
 };
 
-module.exports = {
-  compress,
-};
+export default compress;
