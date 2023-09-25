@@ -74,3 +74,5 @@ const pathFinderHelper = (root, target) => {
 
   return null;
 };
+
+export default { pathFinder, pathFinderPush, pathFinderHelper };
