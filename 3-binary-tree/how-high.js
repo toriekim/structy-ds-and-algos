@@ -58,3 +58,5 @@ const howHighRec = (root) => {
   const rightHeight = howHighRec(root.right);
   return 1 + Math.max(leftHeight, rightHeight);
 };
+
+export default { howHigh, howHighRec };
