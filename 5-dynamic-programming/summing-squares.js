@@ -45,4 +45,8 @@ const summingSquares = (n, memo = {}) => {
   return min;
 };
 
+// n = length of nums
+// Time: O(n * sqrt(n))
+// Space: O(n)
+
 export default { summingSquares };
