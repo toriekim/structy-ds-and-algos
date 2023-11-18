@@ -27,7 +27,26 @@
  */
 
 const nestingScore = (str) => {
-  // todo
+  // Initialize stack with 0 since str will start with opening bracket
+  const stack = [0]
+  for (let bracket of str) {
+    // If bracket is opening, add 0 to stack
+    if (bracket === "[") {
+      stack.push(0)
+    } else {
+      // If bracket is closing, pop from stack
+      const popped = stack.pop()
+      // If popped element is 0, add 1 to the last element in stack
+      if (popped === 0) {
+        stack[stack.length - 1] += 1
+      } else {
+        // Otherwise, double popped and add to last element in stack
+        stack[stack.length - 1] += 2 * popped
+      }
+    }
+  }
+  // Return the first element in stack which is the final score
+  return stack[0]
 };
 
 export default { nestingScore };
