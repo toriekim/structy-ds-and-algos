@@ -1,11 +1,9 @@
 import { expect } from 'chai';
 import * as LinkedList from './index.js';
-const { Node } = LinkedList;
+const { Node, linkedListValues } = LinkedList;
 
 describe('2-Linked-Lists', () => {
   describe('linked-list-values', () => {
-    const { linkedListValues, linkedListValuesRec } = LinkedList;
-
     it(`returns an array containing all node values in liked list`, () => {
       const a = new Node('a');
       const b = new Node('b');
@@ -183,7 +181,7 @@ describe('2-Linked-Lists', () => {
       // a -> b -> c -> d -> e -> f
 
       const reversedList = reverseList(a); // f -> e -> d -> c -> b -> a
-      const reversedListValues = LinkedList.linkedListValues(reversedList);
+      const reversedListValues = linkedListValues(reversedList);
 
       expect(reversedListValues).to.have.lengthOf(6);
       expect(reversedListValues).to.deep.equal(['f', 'e', 'd', 'c', 'b', 'a']);
@@ -196,7 +194,7 @@ describe('2-Linked-Lists', () => {
       // x -> y
 
       const reversedList = reverseList(x); // y -> x
-      const reversedListValues = LinkedList.linkedListValues(reversedList);
+      const reversedListValues = linkedListValues(reversedList);
 
       expect(reversedListValues).to.deep.equal(['y', 'x']);
       expect(reversedListValues).to.have.lengthOf(2);
@@ -206,7 +204,7 @@ describe('2-Linked-Lists', () => {
       const p = new Node('p'); // p
 
       const reversedList = reverseList(p);
-      const reversedListValues = LinkedList.linkedListValues(reversedList);
+      const reversedListValues = linkedListValues(reversedList);
 
       expect(reversedListValues).to.deep.equal(['p']);
       expect(reversedListValues).to.have.lengthOf(1);
@@ -233,7 +231,7 @@ describe('2-Linked-Lists', () => {
 
       const zipperedList = zipperLists(a, x);
       // a -> x -> b -> y -> c -> z
-      const zipperedListValues = LinkedList.linkedListValues(zipperedList);
+      const zipperedListValues = linkedListValues(zipperedList);
 
       expect(zipperedListValues).to.have.lengthOf(6);
       expect(zipperedListValues).to.have.ordered.members([
@@ -269,7 +267,7 @@ describe('2-Linked-Lists', () => {
 
       const zipperedList = zipperLists(a, x);
       // a -> x -> b -> y -> c -> z -> d -> e -> f
-      const zipperedListValues = LinkedList.linkedListValues(zipperedList);
+      const zipperedListValues = linkedListValues(zipperedList);
 
       expect(zipperedListValues).to.have.lengthOf(9);
       expect(zipperedListValues).to.have.ordered.members([
@@ -302,7 +300,7 @@ describe('2-Linked-Lists', () => {
 
       const zipperedList = zipperLists(s, one);
       // s -> 1 -> t -> 2 -> 3 -> 4
-      const zipperedListValues = LinkedList.linkedListValues(zipperedList);
+      const zipperedListValues = linkedListValues(zipperedList);
 
       expect(zipperedListValues).to.have.lengthOf(6);
       expect(zipperedListValues).to.have.ordered.members([
@@ -327,7 +325,7 @@ describe('2-Linked-Lists', () => {
 
       const zipperedList = zipperLists(w, one);
       // w -> 1 -> 2 -> 3
-      const zipperedValues = LinkedList.linkedListValues(zipperedList);
+      const zipperedValues = linkedListValues(zipperedList);
 
       expect(zipperedValues).to.have.lengthOf(4);
       expect(zipperedValues).to.have.ordered.members(['w', 1, 2, 3]);
@@ -345,7 +343,7 @@ describe('2-Linked-Lists', () => {
 
       const zipperedList = zipperLists(one, w);
       // 1 -> w -> 2 -> 3
-      const zipperedValues = LinkedList.linkedListValues(zipperedList);
+      const zipperedValues = linkedListValues(zipperedList);
 
       expect(zipperedValues).to.have.lengthOf(4);
       expect(zipperedValues).to.have.ordered.members([1, 'w', 2, 3]);
@@ -380,7 +378,7 @@ describe('2-Linked-Lists', () => {
 
       const mergedList = mergeLists(a, q);
       // 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 20 -> 25 -> 28
-      const mergedValues = LinkedList.linkedListValues(mergedList);
+      const mergedValues = linkedListValues(mergedList);
 
       expect(mergedValues).to.have.lengthOf(10);
       expect(mergedValues).to.have.ordered.members([
@@ -413,7 +411,7 @@ describe('2-Linked-Lists', () => {
 
       const mergedList = mergeLists(a, q);
       // 1 -> 5 -> 7 -> 8 -> 9 -> 10 -> 10 -> 12 -> 20 -> 28
-      const mergedValues = LinkedList.linkedListValues(mergedList);
+      const mergedValues = linkedListValues(mergedList);
 
       expect(mergedValues).to.have.lengthOf(10);
       expect(mergedValues).to.have.ordered.members([
@@ -430,7 +428,7 @@ describe('2-Linked-Lists', () => {
       // 15 -> 67
 
       const mergedList = mergeLists(h, p); // 15 -> 30 -> 67
-      const mergedValues = LinkedList.linkedListValues(mergedList);
+      const mergedValues = linkedListValues(mergedList);
 
       expect(mergedValues).to.have.lengthOf(3);
       expect(mergedValues).to.have.ordered.members([15, 30, 67]);
@@ -582,7 +580,7 @@ describe('2-Linked-Lists', () => {
   });
 
   describe(`remove-node`, () => {
-    const { removeNode, removeNodeRec, linkedListValues } = LinkedList;
+    const { removeNode, removeNodeRec } = LinkedList;
 
     it(`returns head of resulting linked list with node containing target value removed`, () => {
       const a = new Node('a');
@@ -666,7 +664,7 @@ describe('2-Linked-Lists', () => {
   });
 
   describe(`insert-node`, () => {
-    const { insertNode, insertNodeRec, linkedListValues } = LinkedList;
+    const { insertNode, insertNodeRec } = LinkedList;
 
     it(`returns head of resulting linked list with inserted node`, () => {
       const a = new Node('a');
@@ -780,8 +778,7 @@ describe('2-Linked-Lists', () => {
   });
 
   describe(`create-linked-list`, () => {
-    const { createLinkedList, createLinkedListRec, linkedListValues } =
-      LinkedList;
+    const { createLinkedList, createLinkedListRec } = LinkedList;
 
     it(`handles string values`, () => {
       const createdList = createLinkedList(['h', 'e', 'y']);
