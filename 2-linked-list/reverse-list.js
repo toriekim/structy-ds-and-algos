@@ -38,7 +38,7 @@ const reverseList = (head) => {
     current = next;
   }
 
-  return prev.next;
+  return prev;
 };
 
 // Recursive
@@ -51,4 +51,4 @@ const reverseListRec = (head, prev = null) => {
   return reverseList(next, head);
 };
 
-export default { reverseList, reverseListRec };
+export { reverseList, reverseListRec };

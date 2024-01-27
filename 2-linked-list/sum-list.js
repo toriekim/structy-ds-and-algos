@@ -26,4 +26,4 @@ const sumListRec = (head) => {
   return head.val + sumList(head.next);
 };
 
-export default { sumList, sumListRec };
+export { sumList, sumListRec };

@@ -48,4 +48,4 @@ const isUnivalueListRec = (head, prevVal = null) => {
   } else return false;
 };
 
-export default { isUnivalueList, isUnivalueListRec };
+export { isUnivalueList, isUnivalueListRec };

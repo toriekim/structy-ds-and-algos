@@ -1,3 +1,5 @@
+import { Node } from './index.js';
+
 /*
 Write a function, insertNode, that takes in the head of a linked list, a value, and an index. The function should insert a new node with the value into the list at the specified index. Consider the head of the linked list as index 0. The function should return the head of the resulting linked list.
 
@@ -73,4 +75,4 @@ const insertNodeRec = (head, value, index) => {
   return head;
 };
 
-export default { insertNode, insertNodeRec };
+export { insertNode, insertNodeRec };

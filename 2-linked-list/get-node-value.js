@@ -30,4 +30,4 @@ const getNodeValueRec = (head, index) => {
   return getNodeValue(head.next, index - 1);
 };
 
-export default { getNodeValue, getNodeValueRec };
+export { getNodeValue, getNodeValueRec };

@@ -48,4 +48,4 @@ const _linkedListValues = (current, values) => {
   _linkedListValues(current.next, values);
 };
 
-export default { linkedListValues, linkedListValuesRec };
+export { linkedListValues, linkedListValuesRec };

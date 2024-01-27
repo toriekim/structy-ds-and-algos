@@ -27,4 +27,5 @@ const linkedListFindRec = (head, target) => {
   if (head.val === target) return true;
   return linkedListFind(head.next, target);
 };
-export default { linkedListFind, linkedListFindRec };
+
+export { linkedListFind, linkedListFindRec };

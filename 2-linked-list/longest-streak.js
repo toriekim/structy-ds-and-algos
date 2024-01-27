@@ -59,4 +59,4 @@ const longestStreakRec = (head, prevVal = null, streak = 0, longest = 0) => {
   return longestStreakRec(head.next, head.val, streak, longest);
 };
 
-export default { longestStreak, longestStreakRec };
+export { longestStreak, longestStreakRec };

@@ -70,4 +70,4 @@ const zipperListsRec = (head1, head2) => {
   return head1;
 };
 
-export default { zipperLists, zipperListsRec };
+export { zipperLists, zipperListsRec };

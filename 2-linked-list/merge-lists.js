@@ -1,3 +1,5 @@
+import { Node } from './index.js';
+
 /*
 Write a function, mergeLists, that takes in the head of two sorted linked lists as arguments. The function should merge the two lists together into single sorted linked list. The function should return the head of the merged linked list.
 
@@ -79,4 +81,4 @@ const mergeListsRec = (head1, head2) => {
   }
 };
 
-export default { mergeLists, mergeListsRec };
+export { mergeLists, mergeListsRec };

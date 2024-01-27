@@ -64,4 +64,4 @@ const removeNodeRec = (head, targetVal) => {
   return head;
 };
 
-export default { removeNode, removeNodeRec };
+export { removeNode, removeNodeRec };
