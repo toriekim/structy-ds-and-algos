@@ -38,7 +38,7 @@ By Alvin Zablan, Instructor
 - tree sum
 - tree incldues
 - tree min value
-- max root ot leaf path sum
+- max root to leaf path sum
 - tree path finder ⭐
 - tree value count ⭐
 - how high ⭐
